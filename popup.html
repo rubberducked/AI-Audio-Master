@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Audio Master</title>
+  <link rel="stylesheet" href="src/styles/popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI Audio Master</h1>
+      <button id="aiToggle" class="ai-toggle">
+        <span class="ai-icon">🤖</span>
+        <span class="ai-label">AI Mode</span>
+      </button>
+    </header>
+    
+    <main>
+      <!-- Rotatable Volume Dial -->
+      <div class="dial-container">
+        <div class="dial-wrapper">
+          <div class="dial" id="volumeDial">
+            <div class="dial-indicator"></div>
+            <div class="dial-light"></div>
+          </div>
+          <div class="dial-value" id="volumeValue">50</div>
+        </div>
+        <label>Volume</label>
+      </div>
+
+      <!-- Studio-style Vertical Sliders -->
+      <div class="sliders-container">
+        <div class="slider-group">
+          <div class="slider-track">
+            <div class="slider-handle" id="bassSlider" draggable="true"></div>
+            <div class="slider-fill"></div>
+          </div>
+          <label>Bass</label>
+          <span class="slider-value" id="bassValue">0</span>
+        </div>
+
+        <div class="slider-group">
+          <div class="slider-track">
+            <div class="slider-handle" id="trebleSlider" draggable="true"></div>
+            <div class="slider-fill"></div>
+          </div>
+          <label>Treble</label>
+          <span class="slider-value" id="trebleValue">0</span>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <button id="resetBtn" class="reset-btn">Reset</button>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
