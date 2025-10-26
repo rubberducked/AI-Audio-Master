@@ -29,8 +29,8 @@
         <label>Volume</label>
       </div>
 
-      <!-- Studio-style Vertical Sliders -->
-      <div class="sliders-container">
+      <!-- Default View: Bass & Treble Sliders -->
+      <div class="sliders-container" id="defaultSliders">
         <div class="slider-group">
           <div class="slider-track">
             <div class="slider-handle" id="bassSlider" draggable="true"></div>
@@ -39,7 +39,6 @@
           <label>Bass</label>
           <span class="slider-value" id="bassValue">0</span>
         </div>
-
         <div class="slider-group">
           <div class="slider-track">
             <div class="slider-handle" id="trebleSlider" draggable="true"></div>
@@ -49,10 +48,63 @@
           <span class="slider-value" id="trebleValue">0</span>
         </div>
       </div>
+
+      <!-- Advanced View: Multi-Band EQ -->
+      <div class="eq-container hidden" id="advancedEQ">
+        <div class="eq-band">
+          <div class="eq-track">
+            <div class="eq-handle" id="eq60" data-freq="60" draggable="true"></div>
+            <div class="eq-fill"></div>
+          </div>
+          <label>60Hz</label>
+          <span class="eq-value" id="eq60Value">0</span>
+        </div>
+        <div class="eq-band">
+          <div class="eq-track">
+            <div class="eq-handle" id="eq150" data-freq="150" draggable="true"></div>
+            <div class="eq-fill"></div>
+          </div>
+          <label>150Hz</label>
+          <span class="eq-value" id="eq150Value">0</span>
+        </div>
+        <div class="eq-band">
+          <div class="eq-track">
+            <div class="eq-handle" id="eq400" data-freq="400" draggable="true"></div>
+            <div class="eq-fill"></div>
+          </div>
+          <label>400Hz</label>
+          <span class="eq-value" id="eq400Value">0</span>
+        </div>
+        <div class="eq-band">
+          <div class="eq-track">
+            <div class="eq-handle" id="eq1k" data-freq="1000" draggable="true"></div>
+            <div class="eq-fill"></div>
+          </div>
+          <label>1KHz</label>
+          <span class="eq-value" id="eq1kValue">0</span>
+        </div>
+        <div class="eq-band">
+          <div class="eq-track">
+            <div class="eq-handle" id="eq2k4" data-freq="2400" draggable="true"></div>
+            <div class="eq-fill"></div>
+          </div>
+          <label>2.4KHz</label>
+          <span class="eq-value" id="eq2k4Value">0</span>
+        </div>
+        <div class="eq-band">
+          <div class="eq-track">
+            <div class="eq-handle" id="eq15k" data-freq="15000" draggable="true"></div>
+            <div class="eq-fill"></div>
+          </div>
+          <label>15KHz</label>
+          <span class="eq-value" id="eq15kValue">0</span>
+        </div>
+      </div>
     </main>
 
     <footer>
-      <button id="resetBtn" class="reset-btn">Reset</button>
+      <button class="advanced-btn" id="advancedBtn">Advanced Settings</button>
+      <button class="reset-btn" id="resetBtn">Reset</button>
     </footer>
   </div>
   
